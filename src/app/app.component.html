@@ -1,483 +1,1311 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">City staff</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-back'></i>
+				</div>
+			 </div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="javascript:;">
+						<div class="parent-icon"><i class='bx bx-home-alt'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+				</li>
+        <li>
+					<a href="javascript:;">
+						<div class="parent-icon"><i class='bx bx-search'></i>
+						</div>
+						<div class="menu-title">Case Search</div>
+					</a>
+				</li>
+      </ul>
+    </div>
 
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    <header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand gap-3">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+					  <div class="search-bar d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
+					     <a href="javascript:;" class="btn d-flex align-items-center"><i class='bx bx-search'></i>Search</a>
+					  </div>
 
-  p {
-    margin: 0;
-  }
+					  <div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center gap-1">
+							<li class="nav-item mobile-search-icon d-flex d-lg-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
+								<a class="nav-link" href="javascript:;"><i class='bx bx-search'></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown dropdown-laungauge d-none d-sm-flex">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown"><img src="assets/images/county/02.png" width="22" alt="">
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/01.png" width="20" alt=""><span class="ms-2">English</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/02.png" width="20" alt=""><span class="ms-2">Catalan</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/03.png" width="20" alt=""><span class="ms-2">French</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/04.png" width="20" alt=""><span class="ms-2">Belize</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/05.png" width="20" alt=""><span class="ms-2">Colombia</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/06.png" width="20" alt=""><span class="ms-2">Spanish</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/07.png" width="20" alt=""><span class="ms-2">Georgian</span></a>
+									</li>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/08.png" width="20" alt=""><span class="ms-2">Hindi</span></a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dark-mode d-none d-sm-flex">
+								<a class="nav-link dark-mode-icon" href="javascript:;"><i class='bx bx-moon'></i>
+								</a>
+							</li>
 
-  .spacer {
-    flex: 1;
-  }
+							<li class="nav-item dropdown dropdown-app">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class='bx bx-grid-alt'></i></a>
+								<div class="dropdown-menu dropdown-menu-end p-0">
+									<div class="app-container p-2 my-2">
+									  <div class="row gx-0 gy-2 row-cols-3 justify-content-center p-2">
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/slack.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Slack</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/behance.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Behance</p>
+											  </div>
+											  </div>
+										  </a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												<img src="assets/images/app/google-drive.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Dribble</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/outlook.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Outlook</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/github.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">GitHub</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/stack-overflow.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Stack</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/figma.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Stack</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/twitter.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Twitter</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/google-calendar.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Calendar</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/spotify.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Spotify</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/google-photos.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Photos</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/pinterest.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Photos</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/linkedin.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">linkedin</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/dribble.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Dribble</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/youtube.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">YouTube</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/google.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">News</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/envato.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Envato</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+										 <div class="col">
+										  <a href="javascript:;">
+											<div class="app-box text-center">
+											  <div class="app-icon">
+												  <img src="assets/images/app/safari.png" width="30" alt="">
+											  </div>
+											  <div class="app-name">
+												  <p class="mb-0 mt-1">Safari</p>
+											  </div>
+											  </div>
+											</a>
+										 </div>
+				
+									  </div><!--end row-->
+				
+									</div>
+								</div>
+							</li>
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" data-bs-toggle="dropdown"><span class="alert-count">7</span>
+									<i class='bx bx-bell'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">Notifications</p>
+											<p class="msg-header-badge">8 New</p>
+										</div>
+									</a>
+									<div class="header-notifications-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Daisy Anderson<span class="msg-time float-end">5 sec
+												ago</span></h6>
+													<p class="msg-info">The standard chunk of lorem</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-danger text-danger">dc
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
+												ago</span></h6>
+													<p class="msg-info">You have recived new orders</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-2.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Althea Cabardo <span class="msg-time float-end">14
+												sec ago</span></h6>
+													<p class="msg-info">Many desktop publishing packages</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success">
+													<img src="assets/images/app/outlook.png" width="25" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Account Created<span class="msg-time float-end">28 min
+												ago</span></h6>
+													<p class="msg-info">Successfully created new email</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-info text-info">Ss
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New Product Approved <span
+												class="msg-time float-end">2 hrs ago</span></h6>
+													<p class="msg-info">Your new product has approved</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-4.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Katherine Pechon <span class="msg-time float-end">15
+												min ago</span></h6>
+													<p class="msg-info">Making this the first true generator</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
+												ago</span></h6>
+													<p class="msg-info">Successfully shipped your item</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="notify bg-light-primary">
+													<img src="assets/images/app/github.png" width="25" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
+												ago</span></h6>
+													<p class="msg-info">24 new authors joined last week</p>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center">
+												<div class="user-online">
+													<img src="assets/images/avatars/avatar-8.png" class="msg-avatar" alt="user avatar">
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="msg-name">Peter Costanzo <span class="msg-time float-end">6 hrs
+												ago</span></h6>
+													<p class="msg-info">It was popularised in the 1960s</p>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">
+											<button class="btn btn-primary w-100">View All Notifications</button>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+									<i class='bx bx-shopping-bag'></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<a href="javascript:;">
+										<div class="msg-header">
+											<p class="msg-header-title">My Cart</p>
+											<p class="msg-header-badge">10 Items</p>
+										</div>
+									</a>
+									<div class="header-message-list">
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/11.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/02.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/03.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/04.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/05.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/06.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/07.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/08.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+										<a class="dropdown-item" href="javascript:;">
+											<div class="d-flex align-items-center gap-3">
+												<div class="position-relative">
+													<div class="cart-product rounded-circle bg-light">
+														<img src="assets/images/products/09.png" class="" alt="product image">
+													</div>
+												</div>
+												<div class="flex-grow-1">
+													<h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
+													<p class="cart-product-price mb-0">1 X $29.00</p>
+												</div>
+												<div class="">
+													<p class="cart-price mb-0">$250</p>
+												</div>
+												<div class="cart-product-cancel"><i class="bx bx-x"></i>
+												</div>
+											</div>
+										</a>
+									</div>
+									<a href="javascript:;">
+										<div class="text-center msg-footer">
+											<div class="d-flex align-items-center justify-content-between mb-3">
+												<h5 class="mb-0">Total</h5>
+												<h5 class="mb-0 ms-auto">$489.00</h5>
+											</div>
+											<button class="btn btn-primary w-100">Checkout</button>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown px-3">
+						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+							<div class="user-info">
+								<p class="user-name mb-0">Pauline Seitz</p>
+								<p class="designattion mb-0">Web Designer</p>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-user fs-5"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-cog fs-5"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
+							</li>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
+							</li>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-download fs-5"></i><span>Downloads</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+    <div class="page-wrapper">
+			<div class="page-content">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+                   <div class="col">
+					 <div class="card radius-10 border-start border-0 border-4 border-info">
+						<div class="card-body">
+							<div class="d-flex align-items-center">
+								<div>
+									<p class="mb-0 text-secondary">Total Orders</p>
+									<h4 class="my-1 text-info">4805</h4>
+									<p class="mb-0 font-13">+2.5% from last week</p>
+								</div>
+								<div class="widgets-icons-2 rounded-circle bg-gradient-blues text-white ms-auto"><i class='bx bxs-cart'></i>
+								</div>
+							</div>
+						</div>
+					 </div>
+				   </div>
+				   <div class="col">
+					<div class="card radius-10 border-start border-0 border-4 border-danger">
+					   <div class="card-body">
+						   <div class="d-flex align-items-center">
+							   <div>
+								   <p class="mb-0 text-secondary">Total Revenue</p>
+								   <h4 class="my-1 text-danger">$84,245</h4>
+								   <p class="mb-0 font-13">+5.4% from last week</p>
+							   </div>
+							   <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto"><i class='bx bxs-wallet'></i>
+							   </div>
+						   </div>
+					   </div>
+					</div>
+				  </div>
+				  <div class="col">
+					<div class="card radius-10 border-start border-0 border-4 border-success">
+					   <div class="card-body">
+						   <div class="d-flex align-items-center">
+							   <div>
+								   <p class="mb-0 text-secondary">Bounce Rate</p>
+								   <h4 class="my-1 text-success">34.6%</h4>
+								   <p class="mb-0 font-13">-4.5% from last week</p>
+							   </div>
+							   <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class='bx bxs-bar-chart-alt-2' ></i>
+							   </div>
+						   </div>
+					   </div>
+					</div>
+				  </div>
+				  <div class="col">
+					<div class="card radius-10 border-start border-0 border-4 border-warning">
+					   <div class="card-body">
+						   <div class="d-flex align-items-center">
+							   <div>
+								   <p class="mb-0 text-secondary">Total Customers</p>
+								   <h4 class="my-1 text-warning">8.4K</h4>
+								   <p class="mb-0 font-13">+8.4% from last week</p>
+							   </div>
+							   <div class="widgets-icons-2 rounded-circle bg-gradient-orange text-white ms-auto"><i class='bx bxs-group'></i>
+							   </div>
+						   </div>
+					   </div>
+					</div>
+				  </div> 
+				</div><!--end row-->
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
+				<div class="row">
+                   <div class="col-12 col-lg-8 d-flex">
+                      <div class="card radius-10 w-100">
+						<div class="card-header">
+							<div class="d-flex align-items-center">
+								<div>
+									<h6 class="mb-0">Sales Overview</h6>
+								</div>
+								<div class="dropdown ms-auto">
+									<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="javascript:;">Action</a>
+										</li>
+										<li><a class="dropdown-item" href="javascript:;">Another action</a>
+										</li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						  <div class="card-body">
+							<div class="d-flex align-items-center ms-auto font-13 gap-2 mb-3">
+								<span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1" style="color: #14abef"></i>Sales</span>
+								<span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1" style="color: #ffc107"></i>Visits</span>
+							</div>
+							<div class="chart-container-1">
+								<canvas id="chart1"></canvas>
+							  </div>
+						  </div>
+						  <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 g-0 row-group text-center border-top">
+							<div class="col">
+							  <div class="p-3">
+								<h5 class="mb-0">24.15M</h5>
+								<small class="mb-0">Overall Visitor <span> <i class="bx bx-up-arrow-alt align-middle"></i> 2.43%</span></small>
+							  </div>
+							</div>
+							<div class="col">
+							  <div class="p-3">
+								<h5 class="mb-0">12:38</h5>
+								<small class="mb-0">Visitor Duration <span> <i class="bx bx-up-arrow-alt align-middle"></i> 12.65%</span></small>
+							  </div>
+							</div>
+							<div class="col">
+							  <div class="p-3">
+								<h5 class="mb-0">639.82</h5>
+								<small class="mb-0">Pages/Visit <span> <i class="bx bx-up-arrow-alt align-middle"></i> 5.62%</span></small>
+							  </div>
+							</div>
+						  </div>
+					  </div>
+				   </div>
+				   <div class="col-12 col-lg-4 d-flex">
+                       <div class="card radius-10 w-100">
+						<div class="card-header">
+							<div class="d-flex align-items-center">
+								<div>
+									<h6 class="mb-0">Trending Products</h6>
+								</div>
+								<div class="dropdown ms-auto">
+									<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="javascript:;">Action</a>
+										</li>
+										<li><a class="dropdown-item" href="javascript:;">Another action</a>
+										</li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						   <div class="card-body">
+							<div class="chart-container-2">
+								<canvas id="chart2"></canvas>
+							  </div>
+						   </div>
+						   <ul class="list-group list-group-flush">
+							<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">Jeans <span class="badge bg-success rounded-pill">25</span>
+							</li>
+							<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">T-Shirts <span class="badge bg-danger rounded-pill">10</span>
+							</li>
+							<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Shoes <span class="badge bg-primary rounded-pill">65</span>
+							</li>
+							<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Lingerie <span class="badge bg-warning text-dark rounded-pill">14</span>
+							</li>
+						</ul>
+					   </div>
+				   </div>
+				</div><!--end row-->
 
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
+				 <div class="card radius-10">
+					<div class="card-header">
+						<div class="d-flex align-items-center">
+							<div>
+								<h6 class="mb-0">Recent Orders</h6>
+							</div>
+							<div class="dropdown ms-auto">
+								<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="javascript:;">Action</a>
+									</li>
+									<li><a class="dropdown-item" href="javascript:;">Another action</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                         <div class="card-body">
+						 <div class="table-responsive">
+						   <table class="table align-middle mb-0">
+							<thead class="table-light">
+							 <tr>
+							   <th>Product</th>
+							   <th>Photo</th>
+							   <th>Product ID</th>
+							   <th>Status</th>
+							   <th>Amount</th>
+							   <th>Date</th>
+							   <th>Shipping</th>
+							 </tr>
+							 </thead>
+							 <tbody><tr>
+							  <td>Iphone 5</td>
+							  <td><img src="assets/images/products/01.png" class="product-img-2" alt="product img"></td>
+							  <td>#9405822</td>
+							  <td><span class="badge bg-gradient-quepal text-white shadow-sm w-100">Paid</span></td>
+							  <td>$1250.00</td>
+							  <td>03 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-quepal" role="progressbar" style="width: 100%"></div>
+								  </div></td>
+							 </tr>
+		  
+							 <tr>
+							  <td>Earphone GL</td>
+							  <td><img src="assets/images/products/02.png" class="product-img-2" alt="product img"></td>
+							  <td>#8304620</td>
+							  <td><span class="badge bg-gradient-blooker text-white shadow-sm w-100">Pending</span></td>
+							  <td>$1500.00</td>
+							  <td>05 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-blooker" role="progressbar" style="width: 60%"></div>
+								  </div></td>
+							 </tr>
+		  
+							 <tr>
+							  <td>HD Hand Camera</td>
+							  <td><img src="assets/images/products/03.png" class="product-img-2" alt="product img"></td>
+							  <td>#4736890</td>
+							  <td><span class="badge bg-gradient-bloody text-white shadow-sm w-100">Failed</span></td>
+							  <td>$1400.00</td>
+							  <td>06 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-bloody" role="progressbar" style="width: 70%"></div>
+								  </div></td>
+							 </tr>
+		  
+							 <tr>
+							  <td>Clasic Shoes</td>
+							  <td><img src="assets/images/products/04.png" class="product-img-2" alt="product img"></td>
+							  <td>#8543765</td>
+							  <td><span class="badge bg-gradient-quepal text-white shadow-sm w-100">Paid</span></td>
+							  <td>$1200.00</td>
+							  <td>14 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-quepal" role="progressbar" style="width: 100%"></div>
+								  </div></td>
+							 </tr>
+							 <tr>
+							  <td>Sitting Chair</td>
+							  <td><img src="assets/images/products/06.png" class="product-img-2" alt="product img"></td>
+							  <td>#9629240</td>
+							  <td><span class="badge bg-gradient-blooker text-white shadow-sm w-100">Pending</span></td>
+							  <td>$1500.00</td>
+							  <td>18 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-blooker" role="progressbar" style="width: 60%"></div>
+								  </div></td>
+							 </tr>
+							 <tr>
+							  <td>Hand Watch</td>
+							  <td><img src="assets/images/products/05.png" class="product-img-2" alt="product img"></td>
+							  <td>#8506790</td>
+							  <td><span class="badge bg-gradient-bloody text-white shadow-sm w-100">Failed</span></td>
+							  <td>$1800.00</td>
+							  <td>21 Feb 2020</td>
+							  <td><div class="progress" style="height: 6px;">
+									<div class="progress-bar bg-gradient-bloody" role="progressbar" style="width: 40%"></div>
+								  </div></td>
+							 </tr>
+						    </tbody>
+						  </table>
+						  </div>
+						 </div>
+					</div>
 
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
-  }
 
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+					<div class="row">
+						<div class="col-12 col-lg-7 col-xl-8 d-flex">
+						  <div class="card radius-10 w-100">
+							<div class="card-header bg-transparent">
+								<div class="d-flex align-items-center">
+									<div>
+										<h6 class="mb-0">Recent Orders</h6>
+									</div>
+									<div class="dropdown ms-auto">
+										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="javascript:;">Action</a>
+											</li>
+											<li><a class="dropdown-item" href="javascript:;">Another action</a>
+											</li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							   </div>
+							 <div class="card-body">
+								<div class="row">
+								  <div class="col-lg-7 col-xl-8 border-end">
+									 <div id="geographic-map-2"></div>
+								  </div>
+								  <div class="col-lg-5 col-xl-4">
+			                       
+									<div class="mb-4">
+									<p class="mb-2"><i class="flag-icon flag-icon-us me-1"></i> USA <span class="float-end">70%</span></p>
+									<div class="progress" style="height: 7px;">
+										 <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 70%"></div>
+									 </div>
+									</div>
+			   
+									<div class="mb-4">
+									 <p class="mb-2"><i class="flag-icon flag-icon-ca me-1"></i> Canada <span class="float-end">65%</span></p>
+									 <div class="progress" style="height: 7px;">
+										 <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 65%"></div>
+									 </div>
+									</div>
+			   
+									<div class="mb-4">
+									 <p class="mb-2"><i class="flag-icon flag-icon-gb me-1"></i> England <span class="float-end">60%</span></p>
+									 <div class="progress" style="height: 7px;">
+										 <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 60%"></div>
+									   </div>
+									</div>
+			   
+									<div class="mb-4">
+									 <p class="mb-2"><i class="flag-icon flag-icon-au me-1"></i> Australia <span class="float-end">55%</span></p>
+									 <div class="progress" style="height: 7px;">
+										 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 55%"></div>
+									   </div>
+									</div>
+			   
+									<div class="mb-4">
+									 <p class="mb-2"><i class="flag-icon flag-icon-in me-1"></i> India <span class="float-end">50%</span></p>
+									 <div class="progress" style="height: 7px;">
+										 <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 50%"></div>
+									   </div>
+									</div>
 
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
+									<div class="mb-0">
+									   <p class="mb-2"><i class="flag-icon flag-icon-cn me-1"></i> China <span class="float-end">45%</span></p>
+									   <div class="progress" style="height: 7px;">
+										   <div class="progress-bar bg-dark progress-bar-striped" role="progressbar" style="width: 45%"></div>
+										 </div>
+									</div>
 
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
+								  </div>
+								</div>
+							 </div>
+						   </div>
+						</div>
+			   
+						<div class="col-12 col-lg-5 col-xl-4 d-flex">
+							<div class="card w-100 radius-10">
+						     <div class="card-body">
+							  <div class="card radius-10 border shadow-none">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<p class="mb-0 text-secondary">Total Likes</p>
+											<h4 class="my-1">45.6M</h4>
+											<p class="mb-0 font-13">+6.2% from last week</p>
+										</div>
+										<div class="widgets-icons-2 bg-gradient-cosmic text-white ms-auto"><i class='bx bxs-heart-circle'></i>
+										</div>
+									</div>
+								</div>
+							 </div>
+							 <div class="card radius-10 border shadow-none">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<p class="mb-0 text-secondary">Comments</p>
+											<h4 class="my-1">25.6K</h4>
+											<p class="mb-0 font-13">+3.7% from last week</p>
+										</div>
+										<div class="widgets-icons-2 bg-gradient-ibiza text-white ms-auto"><i class='bx bxs-comment-detail'></i>
+										</div>
+									</div>
+								</div>
+							 </div>
+							 <div class="card radius-10 mb-0 border shadow-none">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<p class="mb-0 text-secondary">Total Shares</p>
+											<h4 class="my-1">85.4M</h4>
+											<p class="mb-0 font-13">+4.6% from last week</p>
+										</div>
+										<div class="widgets-icons-2 bg-gradient-kyoto text-dark ms-auto"><i class='bx bxs-share-alt'></i>
+										</div>
+									</div>
+								</div>
+							  </div>
+							 </div>
 
-  .card svg.material-icons path {
-    fill: #888;
-  }
+							</div>
+			   
+						</div>
+					 </div><!--end row-->
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
+					 <div class="row row-cols-1 row-cols-lg-3">
+						 <div class="col d-flex">
+                           <div class="card radius-10 w-100">
+							   <div class="card-body">
+								<p class="font-weight-bold mb-1 text-secondary">Weekly Revenue</p>
+								<div class="d-flex align-items-center mb-4">
+									<div>
+										<h4 class="mb-0">$89,540</h4>
+									</div>
+									<div class="">
+										<p class="mb-0 align-self-center font-weight-bold text-success ms-2">4.4% <i class="bx bxs-up-arrow-alt mr-2"></i>
+										</p>
+									</div>
+								</div>
+								<div class="chart-container-0 mt-5">
+									<canvas id="chart3"></canvas>
+								  </div>
+							   </div>
+						   </div>
+						 </div>
+						 <div class="col d-flex">
+							<div class="card radius-10 w-100">
+								<div class="card-header bg-transparent">
+									<div class="d-flex align-items-center">
+										<div>
+											<h6 class="mb-0">Orders Summary</h6>
+										</div>
+										<div class="dropdown ms-auto">
+											<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+											</a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="javascript:;">Action</a>
+												</li>
+												<li><a class="dropdown-item" href="javascript:;">Another action</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider">
+												</li>
+												<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="chart-container-1 mt-3">
+										<canvas id="chart4"></canvas>
+									  </div>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">Completed <span class="badge bg-gradient-quepal rounded-pill">25</span>
+									</li>
+									<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Pending <span class="badge bg-gradient-ibiza rounded-pill">10</span>
+									</li>
+									<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Process <span class="badge bg-gradient-deepblue rounded-pill">65</span>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						  <div class="col d-flex">
+							<div class="card radius-10 w-100">
+								 <div class="card-header bg-transparent">
+									<div class="d-flex align-items-center">
+										<div>
+											<h6 class="mb-0">Top Selling Categories</h6>
+										</div>
+										<div class="dropdown ms-auto">
+											<a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+											</a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="javascript:;">Action</a>
+												</li>
+												<li><a class="dropdown-item" href="javascript:;">Another action</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider">
+												</li>
+												<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+												</li>
+											</ul>
+										</div>
+									 </div>
+								 </div>
+								<div class="card-body">
+								   <div class="chart-container-0">
+									 <canvas id="chart5"></canvas>
+								   </div>
+								</div>
+								<div class="row row-group border-top g-0">
+									<div class="col">
+										<div class="p-3 text-center">
+											<h4 class="mb-0 text-danger">$45,216</h4>
+											<p class="mb-0">Clothing</p>
+										</div>
+									</div>
+									<div class="col">
+										<div class="p-3 text-center">
+											<h4 class="mb-0 text-success">$68,154</h4>
+											<p class="mb-0">Electronic</p>
+										</div>
+									 </div>
+								</div><!--end row-->
+							</div>
+						  </div>
+					 </div><!--end row-->
 
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		 <div class="overlay toggle-icon"></div>
 
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
+    <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2022. All right reserved.</p>
+		</footer>
 
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
+    <div class="modal" id="SearchModal" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
+		  <div class="modal-content">
+			<div class="modal-header gap-2">
+			  <div class="position-relative popup-search w-100">
+				<input class="form-control form-control-lg ps-5 border border-3 border-primary" type="search" placeholder="Search">
+				<span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-4"><i class='bx bx-search'></i></span>
+			  </div>
+			  <button type="button" class="btn-close d-md-none" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="search-list">
+				   <p class="mb-1">Html Templates</p>
+				   <div class="list-group">
+					  <a href="javascript:;" class="list-group-item list-group-item-action active align-items-center d-flex gap-2 py-1"><i class='bx bxl-angular fs-4'></i>Best Html Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vuejs fs-4'></i>Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-magento fs-4'></i>Responsive Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-shopify fs-4'></i>eCommerce Html Templates</a>
+				   </div>
+				   <p class="mb-1 mt-3">Web Designe Company</p>
+				   <div class="list-group">
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-windows fs-4'></i>Best Html Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-dropbox fs-4' ></i>Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-opera fs-4'></i>Responsive Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-wordpress fs-4'></i>eCommerce Html Templates</a>
+				   </div>
+				   <p class="mb-1 mt-3">Software Development</p>
+				   <div class="list-group">
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-mailchimp fs-4'></i>Best Html Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-zoom fs-4'></i>Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-sass fs-4'></i>Responsive Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vk fs-4'></i>eCommerce Html Templates</a>
+				   </div>
+				   <p class="mb-1 mt-3">Online Shoping Portals</p>
+				   <div class="list-group">
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-slack fs-4'></i>Best Html Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-skype fs-4'></i>Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-twitter fs-4'></i>Responsive Html5 Templates</a>
+					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vimeo fs-4'></i>eCommerce Html Templates</a>
+				   </div>
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-  .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
-  }
-
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
-
-  .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27,31,35,.2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
-    background-position: -.5em;
-  }
-
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
-</style>
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  <span>Welcome</span>
-    <div class="spacer"></div>
-    <a aria-label="Angular on X" target="_blank" rel="noopener" href="https://twitter.com/angular" title="X">
-      <svg id="twitter-logo" xmlns="http://www.w3.org/2000/svg" height="24" width="24" data-name="Logo" viewBox="0 0 512 512" fill="#fff">
-        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-      </svg>
-    </a>
-    <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
-      <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
-        <path d="M0 0h24v24H0V0z" fill="none"/>
-        <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
-      </svg>
-    </a>
-</div>
-
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-    <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
-      <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
-        <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
-        <g id="Group_47" data-name="Group 47" transform="translate(165.185 720.185)">
-          <path id="Path_33" data-name="Path 33" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" transform="translate(0.371 3.363)" fill="#fff"/>
-          <path id="Path_34" data-name="Path 34" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" transform="translate(0 0.005)" fill="#fff"/>
-        </g>
-      </g>
-    </svg>
-
-    <span>{{ title }} app is running!</span>
-
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-      <title>Rocket Ship Smoke</title>
-      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-    </svg>
-
+    <div class="switcher-wrapper">
+		<div class="switcher-btn"> <i class='bx bx-cog bx-spin'></i>
+		</div>
+		<div class="switcher-body">
+			<div class="d-flex align-items-center">
+				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Theme Styles</h6>
+			<hr/>
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
+					<label class="form-check-label" for="lightmode">Light</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode">
+					<label class="form-check-label" for="darkmode">Dark</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark">
+					<label class="form-check-label" for="semidark">Semi Dark</label>
+				</div>
+			</div>
+			<hr/>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
+				<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Header Colors</h6>
+			<hr/>
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator headercolor1" id="headercolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor2" id="headercolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor3" id="headercolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor4" id="headercolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor5" id="headercolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor6" id="headercolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor7" id="headercolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator headercolor8" id="headercolor8"></div>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<h6 class="mb-0">Sidebar Colors</h6>
+			<hr/>
+			<div class="header-colors-indigators">
+				<div class="row row-cols-auto g-3">
+					<div class="col">
+						<div class="indigator sidebarcolor1" id="sidebarcolor1"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor2" id="sidebarcolor2"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor3" id="sidebarcolor3"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor4" id="sidebarcolor4"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor5" id="sidebarcolor5"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor6" id="sidebarcolor6"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor7" id="sidebarcolor7"></div>
+					</div>
+					<div class="col">
+						<div class="indigator sidebarcolor8" id="sidebarcolor8"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
   </div>
-
-  <!-- Resources -->
-  <h2>Resources</h2>
-  <p>Here are some links to help you get started:</p>
-
-  <div class="card-container">
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-      <span>Learn Angular</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/cli">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-      <span>CLI Documentation</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-
-    <a class="card" target="_blank" rel="noopener" href="https://material.angular.io">
-      <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px" width="21.813" height="23.453" viewBox="0 0 179.2 192.7"><path fill="#ffa726" d="M89.4 0 0 32l13.5 118.4 75.9 42.3 76-42.3L179.2 32 89.4 0z"/><path fill="#fb8c00" d="M89.4 0v192.7l76-42.3L179.2 32 89.4 0z"/><path fill="#ffe0b2" d="m102.9 146.3-63.3-30.5 36.3-22.4 63.7 30.6-36.7 22.3z"/><path fill="#fff3e0" d="M102.9 122.8 39.6 92.2l36.3-22.3 63.7 30.6-36.7 22.3z"/><path fill="#fff" d="M102.9 99.3 39.6 68.7l36.3-22.4 63.7 30.6-36.7 22.4z"/></svg>
-      <span>Angular Material</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-
-    <a class="card" target="_blank" rel="noopener" href="https://blog.angular.io/">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-      <span>Angular Blog</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/devtools/">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M14.73,13.31C15.52,12.24,16,10.93,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.43,0,2.74-0.48,3.81-1.27L19.59,21L21,19.59L14.73,13.31z M9.5,14C7.01,14,5,11.99,5,9.5S7.01,5,9.5,5S14,7.01,14,9.5 S11.99,14,9.5,14z"/><polygon points="10.29,8.44 9.5,6 8.71,8.44 6.25,8.44 8.26,10.03 7.49,12.5 9.5,10.97 11.51,12.5 10.74,10.03 12.75,8.44"/></g></g></svg>
-      <span>Angular DevTools</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-
-  </div>
-
-  <!-- Next Steps -->
-  <h2>Next Steps</h2>
-  <p>What do you want to do next with your app?</p>
-
-  <input type="hidden" #selection>
-
-  <div class="card-container">
-    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>New Component</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Angular Material</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Add PWA Support</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Add Dependency</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Run and Watch Tests</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Build for Production</span>
-    </button>
-  </div>
-
-  <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build</pre>
-  </div>
-
-  <!-- Links -->
-  <div class="card-container">
-    <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24.607" height="23.447" viewBox="0 0 24.607 23.447">
-        <title>Meetup Logo</title>
-        <path id="logo--mSwarm" d="M21.221,14.95A4.393,4.393,0,0,1,17.6,19.281a4.452,4.452,0,0,1-.8.069c-.09,0-.125.035-.154.117a2.939,2.939,0,0,1-2.506,2.091,2.868,2.868,0,0,1-2.248-.624.168.168,0,0,0-.245-.005,3.926,3.926,0,0,1-2.589.741,4.015,4.015,0,0,1-3.7-3.347,2.7,2.7,0,0,1-.043-.38c0-.106-.042-.146-.143-.166a3.524,3.524,0,0,1-1.516-.69A3.623,3.623,0,0,1,2.23,14.557a3.66,3.66,0,0,1,1.077-3.085.138.138,0,0,0,.026-.2,3.348,3.348,0,0,1-.451-1.821,3.46,3.46,0,0,1,2.749-3.28.44.44,0,0,0,.355-.281,5.072,5.072,0,0,1,3.863-3,5.028,5.028,0,0,1,3.555.666.31.31,0,0,0,.271.03A4.5,4.5,0,0,1,18.3,4.7a4.4,4.4,0,0,1,1.334,2.751,3.658,3.658,0,0,1,.022.706.131.131,0,0,0,.1.157,2.432,2.432,0,0,1,1.574,1.645,2.464,2.464,0,0,1-.7,2.616c-.065.064-.051.1-.014.166A4.321,4.321,0,0,1,21.221,14.95ZM13.4,14.607a2.09,2.09,0,0,0,1.409,1.982,4.7,4.7,0,0,0,1.275.221,1.807,1.807,0,0,0,.9-.151.542.542,0,0,0,.321-.545.558.558,0,0,0-.359-.534,1.2,1.2,0,0,0-.254-.078c-.262-.047-.526-.086-.787-.138a.674.674,0,0,1-.617-.75,3.394,3.394,0,0,1,.218-1.109c.217-.658.509-1.286.79-1.918a15.609,15.609,0,0,0,.745-1.86,1.95,1.95,0,0,0,.06-1.073,1.286,1.286,0,0,0-1.051-1.033,1.977,1.977,0,0,0-1.521.2.339.339,0,0,1-.446-.042c-.1-.092-.2-.189-.307-.284a1.214,1.214,0,0,0-1.643-.061,7.563,7.563,0,0,1-.614.512A.588.588,0,0,1,10.883,8c-.215-.115-.437-.215-.659-.316a2.153,2.153,0,0,0-.695-.248A2.091,2.091,0,0,0,7.541,8.562a9.915,9.915,0,0,0-.405.986c-.559,1.545-1.015,3.123-1.487,4.7a1.528,1.528,0,0,0,.634,1.777,1.755,1.755,0,0,0,1.5.211,1.35,1.35,0,0,0,.824-.858c.543-1.281,1.032-2.584,1.55-3.875.142-.355.28-.712.432-1.064a.548.548,0,0,1,.851-.24.622.622,0,0,1,.185.539,2.161,2.161,0,0,1-.181.621c-.337.852-.68,1.7-1.018,2.552a2.564,2.564,0,0,0-.173.528.624.624,0,0,0,.333.71,1.073,1.073,0,0,0,.814.034,1.22,1.22,0,0,0,.657-.655q.758-1.488,1.511-2.978.35-.687.709-1.37a1.073,1.073,0,0,1,.357-.434.43.43,0,0,1,.463-.016.373.373,0,0,1,.153.387.7.7,0,0,1-.057.236c-.065.157-.127.316-.2.469-.42.883-.846,1.763-1.262,2.648A2.463,2.463,0,0,0,13.4,14.607Zm5.888,6.508a1.09,1.09,0,0,0-2.179.006,1.09,1.09,0,0,0,2.179-.006ZM1.028,12.139a1.038,1.038,0,1,0,.01-2.075,1.038,1.038,0,0,0-.01,2.075ZM13.782.528a1.027,1.027,0,1,0-.011,2.055A1.027,1.027,0,0,0,13.782.528ZM22.21,6.95a.882.882,0,0,0-1.763.011A.882.882,0,0,0,22.21,6.95ZM4.153,4.439a.785.785,0,1,0,.787-.78A.766.766,0,0,0,4.153,4.439Zm8.221,18.22a.676.676,0,1,0-.677.666A.671.671,0,0,0,12.374,22.658ZM22.872,12.2a.674.674,0,0,0-.665.665.656.656,0,0,0,.655.643.634.634,0,0,0,.655-.644A.654.654,0,0,0,22.872,12.2ZM7.171-.123A.546.546,0,0,0,6.613.43a.553.553,0,1,0,1.106,0A.539.539,0,0,0,7.171-.123ZM24.119,9.234a.507.507,0,0,0-.493.488.494.494,0,0,0,.494.494.48.48,0,0,0,.487-.483A.491.491,0,0,0,24.119,9.234Zm-19.454,9.7a.5.5,0,0,0-.488-.488.491.491,0,0,0-.487.5.483.483,0,0,0,.491.479A.49.49,0,0,0,4.665,18.936Z" transform="translate(0 0.123)" fill="#f64060"/>
-      </svg>
-    </a>
-
-    <a class="circle-link" title="Join the Conversation on Discord" href="https://discord.gg/angular" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 245 240">
-        <title>Discord Logo</title>
-        <path d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/>
-        <path d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"/>
-      </svg>
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-      Love Angular?&nbsp;
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
-        <div class="github-star-badge">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          Star
-        </div>
-      </a>
-      <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-      </a>
-  </footer>
-
-  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <title>Gray Clouds Background</title>
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
-
-</div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
