@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MsalService } from '@azure/msal-angular';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class SideNavComponent {
 
+  constructor(private authService: MsalService) {}
+
+  logoutUser() {
+    console.log('out');
+    localStorage.clear();
+    const account = this.authService.instance.getActiveAccount();
+    this.authService.instance.logoutRedirect({
+      account: account,
+      postLogoutRedirectUri: window.location.origin + '/memberlogout'
+    });
+  }
 }

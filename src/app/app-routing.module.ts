@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MsalGuard } from '@azure/msal-angular';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CaseSearchComponent } from './case-search/case-search.component';
+import { MemberlogoutComponent } from './memberlogout/memberlogout.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: "", component: LoginComponent, canActivate: [MsalGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [MsalGuard] },
+  { path: 'search', component: CaseSearchComponent, canActivate: [MsalGuard] },
+  { path: 'memberlogout', component: MemberlogoutComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

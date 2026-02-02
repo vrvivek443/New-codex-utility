@@ -14,20 +14,24 @@
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
 				<li>
-					<a href="javascript:;">
-						<div class="parent-icon"><i class='bx bx-home-alt'></i>
+					<a [routerLink]="['/dashboard']">
+						<div class="parent-icon">
+							<i class="bx bx-home-alt"></i>
 						</div>
 						<div class="menu-title">Dashboard</div>
 					</a>
 				</li>
-        <li>
-					<a href="javascript:;">
-						<div class="parent-icon"><i class='bx bx-search'></i>
+			
+				<li>
+					<a routerLink="/search">
+						<div class="parent-icon">
+							<i class="bx bx-search"></i>
 						</div>
 						<div class="menu-title">Case Search</div>
 					</a>
 				</li>
-      </ul>
+			</ul>
+
     </div>
 
     <header>
@@ -636,7 +640,7 @@
 							<li>
 								<div class="dropdown-divider mb-0"></div>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;" (click)="logoutUser()"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
 							</li>
 						</ul>
 					</div>
@@ -644,7 +648,7 @@
 			</div>
 		</header>
 
-
+		<!-- <app-dashboard></app-dashboard> -->
 		<!--end page wrapper -->
 		<!--start overlay-->
 		 <div class="overlay toggle-icon"></div>
@@ -652,7 +656,7 @@
     <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2022. All right reserved.</p>
+			<p class="mb-0">Copyright © 2026. All right reserved.</p>
 		</footer>
 
     <div class="modal" id="SearchModal" tabindex="-1">
