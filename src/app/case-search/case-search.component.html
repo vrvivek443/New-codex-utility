@@ -1,5 +1,156 @@
 <div class="page-wrapper">
-    <div class="page-content">
+  <div class="page-content container mt-4">
 
+    <!-- Search Section -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="caseNumber"
+            placeholder="Enter Case Number"
+          />
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="searchCase()"
+          >
+            Search
+          </button>
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="text-danger mt-2">
+          {{ errorMessage }}
+        </div>
+      </div>
     </div>
+
+    <!-- Case Details Grid -->
+    <div class="row mt-4" *ngIf="caseDetails">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header fw-bold">
+            Case Details
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered">
+              <tr>
+                <th>Case Number</th>
+                <td>{{ caseDetails.caseNumber }}</td>
+              </tr>
+              <tr>
+                <th>Case Id</th>
+                <td>{{ caseDetails.id }}</td>
+              </tr>
+              <tr>
+                <th>Created By</th>
+                <td>{{ caseDetails.createdBy }}</td>
+              </tr>
+            </table>
+
+            <!-- Action Buttons -->
+            <div class="d-flex gap-2">
+              <button class="btn btn-info" (click)="viewDetails()">
+                View Details
+              </button>
+              <button class="btn btn-info" (click)="generateLetter()">
+                Generate Letter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Case Details Card -->
+<div class="row mt-4" *ngIf="showDetailsCard">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header fw-bold">
+        Full Case Information
+      </div>
+
+      <div class="card-body">
+        <div class="row g-3">
+
+          <div class="col-md-3">
+            <label>Source*</label>
+            <input class="form-control" [value]="caseFullDetails.sourcecode" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Source Detail</label>
+            <input class="form-control" [value]="caseFullDetails.sourceDetail" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Received Date</label>
+            <input class="form-control" [value]="caseFullDetails.receivedDate" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Program*</label>
+            <input class="form-control" [value]="caseFullDetails.program" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Priority*</label>
+            <input class="form-control" [value]="caseFullDetails.priority" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>CBDG Case Type</label>
+            <input class="form-control" [value]="caseFullDetails.cbdgCaseType" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Follow-up Date</label>
+            <input class="form-control" [value]="caseFullDetails.followUpDate" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Enforcement Remedy</label>
+            <input class="form-control" [value]="caseFullDetails.enforcementRemedy" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Service</label>
+            <input class="form-control" [value]="caseFullDetails.service" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Open Date</label>
+            <input class="form-control" [value]="caseFullDetails.openDate" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Close Date</label>
+            <input class="form-control" [value]="caseFullDetails.closeDate" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Case Phase</label>
+            <input class="form-control" [value]="caseFullDetails.casePhase" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>Case Status</label>
+            <input class="form-control" [value]="caseFullDetails.caseStatus" readonly>
+          </div>
+
+          <div class="col-md-3">
+            <label>BP Monitoring</label>
+            <input class="form-control" [value]="caseFullDetails.bpMonitoring" readonly>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
 </div>

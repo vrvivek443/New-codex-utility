@@ -13,6 +13,7 @@ import { IPublicClientApplication, PublicClientApplication, InteractionType, Bro
 import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfiguration, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular';
 import { LoginComponent } from './login/login.component';
 import { CaseSearchComponent } from './case-search/case-search.component';
+import { FormsModule } from '@angular/forms';
 
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
@@ -70,7 +71,8 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     BrowserModule,
     AppRoutingModule,
     MsalModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [
     {
