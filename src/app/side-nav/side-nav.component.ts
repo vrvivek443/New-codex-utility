@@ -19,6 +19,8 @@ export class SideNavComponent {
       this._userEmail = user.name;
       this._roleName = user.role.rolename
     }
+    console.log(this._userEmail);
+    console.log(this._roleName)
   }
 
   logoutUser() {

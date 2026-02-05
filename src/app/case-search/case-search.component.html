@@ -5,12 +5,23 @@
     <div class="row">
       <div class="col-md-6">
         <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            [(ngModel)]="caseNumber"
-            placeholder="Enter Case Number"
-          />
+          <div class="input-group">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="caseNumber"
+    placeholder="Enter Case Number"
+  />
+
+  <button
+    class="btn btn-outline-secondary"
+    type="button"
+    (click)="copyCaseNumber()"
+    [attr.title]="copied ? 'Copied!' : 'Copy'"
+  >
+    <i class="bx" [ngClass]="copied ? 'bx-check' : 'bx-clipboard'"></i>
+  </button>
+
           <button
             class="btn btn-primary"
             type="button"
@@ -19,6 +30,7 @@
             Search
           </button>
         </div>
+        <small *ngIf="copied" class="text-success ms-1">Copied!</small>
 
         <!-- Error Message -->
         <div *ngIf="errorMessage" class="text-danger mt-2">
@@ -65,7 +77,7 @@
     </div>
 
     <!-- Full Case Details Card -->
-<div class="row mt-4" *ngIf="showDetailsCard">
+    <div class="row mt-4" *ngIf="showDetailsCard">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header fw-bold">
@@ -77,72 +89,100 @@
 
           <div class="col-md-3">
             <label>Source*</label>
-            <input class="form-control" [value]="caseFullDetails.sourcecode" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.sourcecode || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Source Detail</label>
-            <input class="form-control" [value]="caseFullDetails.sourceDetail" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.sourceDetail || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Received Date</label>
-            <input class="form-control" [value]="caseFullDetails.receivedDate" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.receivedDate || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Program*</label>
-            <input class="form-control" [value]="caseFullDetails.program" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.program || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Priority*</label>
-            <input class="form-control" [value]="caseFullDetails.priority" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.priority || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>CBDG Case Type</label>
-            <input class="form-control" [value]="caseFullDetails.cbdgCaseType" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.cbdgCaseType || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Follow-up Date</label>
-            <input class="form-control" [value]="caseFullDetails.followUpDate" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.followUpDate || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Enforcement Remedy</label>
-            <input class="form-control" [value]="caseFullDetails.enforcementRemedy" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.enforcementRemedy || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Service</label>
-            <input class="form-control" [value]="caseFullDetails.service" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.service || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Open Date</label>
-            <input class="form-control" [value]="caseFullDetails.openDate" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.openDate || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Close Date</label>
-            <input class="form-control" [value]="caseFullDetails.closeDate" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.closeDate || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Case Phase</label>
-            <input class="form-control" [value]="caseFullDetails.casePhase" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.casePhase || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>Case Status</label>
-            <input class="form-control" [value]="caseFullDetails.caseStatus" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.casestatus || ''"
+                   readonly>
           </div>
 
           <div class="col-md-3">
             <label>BP Monitoring</label>
-            <input class="form-control" [value]="caseFullDetails.bpMonitoring" readonly>
+            <input class="form-control"
+                   [value]="caseFullDetails?.bpMonitor || ''"
+                   readonly>
           </div>
 
         </div>
@@ -150,6 +190,49 @@
     </div>
   </div>
 </div>
+
+
+<!-- Generate Letter Card -->
+<div class="row mt-4" *ngIf="showLetterCard">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header fw-bold">
+        Generate Letter
+      </div>
+
+      <div class="card-body">
+        <div class="row g-3 align-items-end">
+
+          <div class="col-md-4">
+            <label class="form-label">Letter Type</label>
+            <select
+              class="form-select"
+              [(ngModel)]="selectedLetter"
+            >
+              <option value="" disabled selected>
+                Select Letter
+              </option>
+              <option *ngFor="let letter of letters" [value]="letter.id">
+                {{ letter.name }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <button
+              class="btn btn-primary mt-4"
+              [disabled]="!selectedLetter"
+            >
+              Generate
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
   </div>
