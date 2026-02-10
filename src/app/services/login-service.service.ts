@@ -7,10 +7,12 @@ import { CaseSearchResponse } from '../interfaces/model';
   providedIn: 'root',
 })
 export class LoginServiceService {
-  private url = 'https://demo.gov-codex.com:8001/api/';
+  private url = 'http://localhost:8001/api/';
   private _userProfile = new BehaviorSubject<any>([]);
   private userSubject = new BehaviorSubject<any>(null);
   user$ = this.userSubject.asObservable();
+  private _noticeCount = new BehaviorSubject<any>([]);
+  currentNoticeCount = this._noticeCount.asObservable();
 
 
   constructor(private _http: HttpClient) {
@@ -21,6 +23,16 @@ export class LoginServiceService {
       this.userSubject.next(parsedUser);
     }
   }
+
+  setMessage(message: any) {
+        this._userProfile.next(message);
+  }
+
+  setNoticeCount(count: any) {
+        this._noticeCount.next(count);
+  }
+    
+  getMessage(): any { return this._userProfile; }
 
   getUserData(userid: any) {
     return this._http.get(this.url + 'user/get' + '?userid=' + userid);
@@ -38,5 +50,13 @@ export class LoginServiceService {
   updateUser(user: any) {
     localStorage.setItem('user', JSON.stringify(user));
     this.userSubject.next(user);
+  }
+
+  getNotices() {
+    return this._http.get(this.url + 'user/getNotices');
+  }
+
+  readNotice(id: any, actionid: any) {
+    return this._http.get(this.url + 'casemaster/messageRead?id=' + id + '&actionId=' + actionid);
   }
 }

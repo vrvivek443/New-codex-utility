@@ -66,6 +66,10 @@ export class CaseSearchComponent {
     private masterDataState: MasterDataStateService,
   ) {}
 
+  ngOnInit() {
+    this.loadMasterData();
+  }
+
   searchCase() {
     this.errorMessage = '';
     this.caseDetails = null;
@@ -207,13 +211,26 @@ export class CaseSearchComponent {
     );
     this.masterDataState.caseStatus$.subscribe((r) => (this._caseStatus = r));
     this.masterDataState.actionList$.subscribe(
-      (r) => (this._actionListDataList = r),
+      (r) => (this._actionListDataList = r.filter((a: any) => a.actionType === 'L')),
     );
+
     this.masterDataState.inspectorList$.subscribe(
       (r) => (this._inspectorList = r),
     );
     // this.masterDataState.supervisorList$.subscribe(r => this._supervisorList = r);
 
     /** 3. INLINE — VIOLATION TREE BUILDING & JSTREE INIT */
+  }
+
+  getSourceName(code: any) {
+    return this._sourceDataList.find((a: any) => a.code === code)?.value;
+  }
+
+  getSourceDetailName(code: any) {
+    return this._sourceCodeTypeDataList.find((a: any) => a.code === code)?.value;
+  }
+
+  getProgramListName(code: any) {
+
   }
 }

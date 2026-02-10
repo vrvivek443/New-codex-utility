@@ -7,6 +7,7 @@ import { tap, map } from 'rxjs/operators';
 export class MasterDataStateService {
 
   private loaded = false;
+  private url = "http://localhost:8001/api"
   private loadedSubject = new BehaviorSubject<boolean>(false);
   loaded$ = this.loadedSubject.asObservable();
 
@@ -54,31 +55,31 @@ export class MasterDataStateService {
     if (this.loaded) return of(true);
 
     const master$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/categorydata/getAll'
+      this. url + '/categorydata/getAll'
     );
 
     const street$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/streetmaster/getAll'
+      this. url + '/streetmaster/getAll'
     );
 
     const action$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/actions/getAll'
+      this. url + '/actions/getAll'
     );
 
     const violation$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/violationtype/getAll'
+      this. url + '/violationtype/getAll'
     );
 
     const caseStatus$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/assignmentmap/caseStatus'
+      this. url + '/assignmentmap/caseStatus'
     );
 
     const inspector$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/user/getAllInspector'
+      this. url + '/user/getAllInspector'
     );
 
     const supervisor$ = this.http.get<any>(
-      'https://demo.gov-codex.com:8001/api/user/getAllSupervisor'
+      this. url + '/user/getAllSupervisor'
     );
 
     return forkJoin([
