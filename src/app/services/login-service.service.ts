@@ -59,4 +59,8 @@ export class LoginServiceService {
   readNotice(id: any, actionid: any) {
     return this._http.get(this.url + 'casemaster/messageRead?id=' + id + '&actionId=' + actionid);
   }
+
+  upsertAction(payload: any) {
+    return this._http.post(this.url + 'casemaster/upsertAction', payload)
+  }
 }

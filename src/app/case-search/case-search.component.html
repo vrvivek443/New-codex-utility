@@ -6,234 +6,182 @@
       <div class="col-md-6">
         <div class="input-group">
           <div class="input-group">
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="caseNumber"
-    placeholder="Enter Case Number"
-  />
+            <input type="text" class="form-control" [(ngModel)]="caseNumber" placeholder="Enter Case Number" />
 
-  <button
-    class="btn btn-outline-secondary"
-    type="button"
-    (click)="copyCaseNumber()"
-    [attr.title]="copied ? 'Copied!' : 'Copy'"
-  >
-    <i class="bx" [ngClass]="copied ? 'bx-check' : 'bx-clipboard'"></i>
-  </button>
+            <button class="btn btn-outline-secondary" type="button" (click)="copyCaseNumber()"
+              [attr.title]="copied ? 'Copied!' : 'Copy'">
+              <i class="bx" [ngClass]="copied ? 'bx-check' : 'bx-clipboard'"></i>
+            </button>
 
-          <button
-            class="btn btn-primary"
-            type="button"
-            (click)="searchCase()"
-          >
-            Search
-          </button>
-        </div>
-        <small *ngIf="copied" class="text-success ms-1">Copied!</small>
+            <button class="btn btn-primary" type="button" (click)="searchCase()">
+              Search
+            </button>
+          </div>
+          <small *ngIf="copied" class="text-success ms-1">Copied!</small>
 
-        <!-- Error Message -->
-        <div *ngIf="errorMessage" class="text-danger mt-2">
-          {{ errorMessage }}
+          <!-- Error Message -->
+          <div *ngIf="errorMessage" class="text-danger mt-2">
+            {{ errorMessage }}
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Case Details Grid -->
-    <div class="row mt-4" *ngIf="caseDetails">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header fw-bold">
-            Case Details
-          </div>
-          <div class="card-body">
-            <table class="table table-bordered">
-              <tr>
-                <th>Case Number</th>
-                <td>{{ caseDetails.caseNumber }}</td>
-              </tr>
-              <tr>
-                <th>Case Id</th>
-                <td>{{ caseDetails.id }}</td>
-              </tr>
-              <tr>
-                <th>Created By</th>
-                <td>{{ caseDetails.createdBy }}</td>
-              </tr>
-            </table>
+      <!-- Case Details Grid -->
+      <div class="row mt-4" *ngIf="caseDetails">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header fw-bold">
+              Case Details
+            </div>
+            <div class="card-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Case Number</th>
+                  <td>{{ caseDetails.caseNumber }}</td>
+                </tr>
+                <tr>
+                  <th>Case Id</th>
+                  <td>{{ caseDetails.id }}</td>
+                </tr>
+                <tr>
+                  <th>Created By</th>
+                  <td>{{ caseDetails.createdBy }}</td>
+                </tr>
+              </table>
 
-            <!-- Action Buttons -->
-            <div class="d-flex gap-2">
-              <button class="btn btn-info" (click)="viewDetails()">
-                View Details
-              </button>
-              <button class="btn btn-info" (click)="generateLetter()">
-                Generate Letter
-              </button>
+              <!-- Action Buttons -->
+              <div class="d-flex gap-2">
+                <button class="btn btn-info" (click)="viewDetails()">
+                  View Details
+                </button>
+                <button class="btn btn-info" (click)="generateLetter()">
+                  Generate Letter
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Full Case Details Card -->
-    <div class="row mt-4" *ngIf="showDetailsCard">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header fw-bold">
-        Full Case Information
-      </div>
+      <div class="row mt-4" *ngIf="showDetailsCard">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header fw-bold">
+              Full Case Information
+            </div>
 
-      <div class="card-body">
-        <div class="row g-3">
+            <div class="card-body">
+              <div class="row g-3">
 
-          <div class="col-md-3">
-            <label>Source*</label>
-            <input class="form-control"
-                   [value]="getSourceName(caseFullDetails?.sourcecode) || ''"
-                   readonly>
+                <div class="col-md-3" *ngFor="let field of caseFields">
+                  <label>{{ field.label }}</label>
+                  <input class="form-control" [value]="field.transform
+                        ? field.transform(getNestedValue(caseFullDetails, field.key))
+                        : getNestedValue(caseFullDetails, field.key)" readonly>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="col-md-3">
-            <label>Source Detail</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.sourceDetail || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Received Date</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.receivedDate || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Program*</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.program || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Priority*</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.priority || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>CBDG Case Type</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.cbdgCaseType || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Follow-up Date</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.followUpDate || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Enforcement Remedy</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.enforcementRemedy || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Service</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.service || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Open Date</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.openDate || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Close Date</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.closeDate || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Case Phase</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.casePhase || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>Case Status</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.casestatus || ''"
-                   readonly>
-          </div>
-
-          <div class="col-md-3">
-            <label>BP Monitoring</label>
-            <input class="form-control"
-                   [value]="caseFullDetails?.bpMonitor || ''"
-                   readonly>
-          </div>
-
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
-<!-- Generate Letter Card -->
-<div class="row mt-4" *ngIf="showLetterCard">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header fw-bold">
-        Generate Letter
-      </div>
+      <!-- Generate Letter Card -->
+      <div class="row mt-4" *ngIf="showLetterCard">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header fw-bold">
+              Generate Letter
+            </div>
 
-      <div class="card-body">
-        <div class="row g-3 align-items-end">
+            <div class="card-body">
+              <div class="row g-3 align-items-end">
 
-          <div class="col-md-4">
-            <label class="form-label">Letter Type</label>
-            <select
-              class="form-select"
-              [(ngModel)]="selectedLetter"
-            >
-              <option value="" disabled selected>
-                Select Letter
-              </option>
-              <option *ngFor="let letter of _actionListDataList" [value]="letter.id">
-                {{ letter.actionDescription }}
-              </option>
-            </select>
+                <div class="col-md-4">
+                  <label class="form-label">Letter Type</label>
+                  <select class="form-select" [(ngModel)]="selectedLetter" (ngModelChange)="onLetterChange($event)">
+                    <option value="" disabled selected>
+                      Select Letter
+                    </option>
+                    <option *ngFor="let letter of _actionListDataList" [value]="letter.actionCode">
+                      {{ letter.actionDescription }}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <button class="btn btn-primary mt-4" [disabled]="!selectedLetter"
+                    (click)="viewGenerateLetter(selectedLetter)">
+                    Generate
+                  </button>
+                </div>
+
+              </div>
+            </div>
           </div>
-
-          <div class="col-md-3">
-            <button
-              class="btn btn-primary mt-4"
-              [disabled]="!selectedLetter"
-            >
-              Generate
-            </button>
-          </div>
-
         </div>
       </div>
+
+      <!-- Person Selection Modal -->
+      <div class="modal fade" id="personSelectionModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <h5 class="modal-title">Select Person</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closePersonModal()">
+              </button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+              <span class="text-danger" *ngIf="isPersonError">
+                Kindly select a person to proceed.
+              </span>
+
+              <table class="table table-striped table-bordered mt-2">
+                <thead>
+                  <tr>
+                    <th style="width:50px;">#</th>
+                    <th>First Name</th>
+                    <th>Person Type</th>
+                    <th>Relationship</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let person of casePerson">
+                    <td>
+                      <input type="checkbox" [value]="person.id" (change)="onPersonCheckboxChange($event, person.id)"
+                        [checked]="selectedPersonIds.includes(person.id)">
+                    </td>
+                    <td>{{ person.firstname }}</td>
+                    <td>{{ getPersonType(person.personType) }}</td>
+                    <td>{{ getRelationShipName(person.relationship) }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer d-flex justify-content-between w-100">
+              <button type="button" class="btn btn-danger" (click)="closePersonModal()">
+                Cancel
+              </button>
+
+              <button type="button" class="btn btn-primary" (click)="saveSelectedPerson()">
+                Save
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
   </div>
-</div>
-
-
-
-  </div>
-</div>

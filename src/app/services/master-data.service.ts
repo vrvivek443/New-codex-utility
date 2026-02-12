@@ -122,7 +122,7 @@ export class MasterDataStateService {
     list.filter(x => x.status).forEach(e => {
       switch (e.category) {
         case 'CaseStatusType':       this.push(this.caseStatusType$, e); break;
-        case 'CasePhaseType':        this.push(this.casePhaseType$, e); break;
+        case 'CasePhase':        this.push(this.casePhaseType$, e); break;
         case 'CaseStatusDetail':     this.push(this.caseStatusDetail$, e); break;
         case 'SourceType':           this.push(this.sourceType$, e); break;
         case 'AreaType':             this.push(this.areaType$, e); break;
