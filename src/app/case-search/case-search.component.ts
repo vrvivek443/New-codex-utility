@@ -172,6 +172,16 @@ export class CaseSearchComponent {
     this.showLetterCard = true;
   }
 
+  cancelDetails() {
+  this.showDetailsCard = false;
+}
+
+cancelLetter() {
+  this.showLetterCard = false;
+  this.selectedLetter = null;
+}
+
+
   copied = false;
 
   copyCaseNumber() {
@@ -378,6 +388,7 @@ export class CaseSearchComponent {
         this.isPersonError = false;
         this.selectedLetter = null;
         this.showLetterCard = false;
+        console.log(physicalName)
         if (physicalName) {
           window.open(physicalName, '_blank');
         }

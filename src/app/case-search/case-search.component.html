@@ -64,63 +64,87 @@
       </div>
 
       <div class="row mt-4" *ngIf="showDetailsCard">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header fw-bold">
-              Full Case Information
-            </div>
+  <div class="col-md-12">
+    <div class="card">
+      
+      <!-- Updated Header with Close Icon -->
+      <div class="card-header d-flex justify-content-between align-items-center fw-bold">
+        <span>Full Case Information</span>
+        <button type="button"
+                class="btn-close"
+                aria-label="Close"
+                (click)="cancelDetails()">
+        </button>
+      </div>
 
-            <div class="card-body">
-              <div class="row g-3">
+      <div class="card-body">
+        <div class="row g-3">
 
-                <div class="col-md-3" *ngFor="let field of caseFields">
-                  <label>{{ field.label }}</label>
-                  <input class="form-control" [value]="field.transform
-                        ? field.transform(getNestedValue(caseFullDetails, field.key))
-                        : getNestedValue(caseFullDetails, field.key)" readonly>
-                </div>
-              </div>
-            </div>
+          <div class="col-md-3" *ngFor="let field of caseFields">
+            <label>{{ field.label }}</label>
+            <input class="form-control"
+                   [value]="field.transform
+                     ? field.transform(getNestedValue(caseFullDetails, field.key))
+                     : getNestedValue(caseFullDetails, field.key)"
+                   readonly>
           </div>
+
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
 
-      <!-- Generate Letter Card -->
-      <div class="row mt-4" *ngIf="showLetterCard">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header fw-bold">
-              Generate Letter
-            </div>
 
-            <div class="card-body">
-              <div class="row g-3 align-items-end">
+<!-- Generate Letter Card -->
+<div class="row mt-4" *ngIf="showLetterCard">
+  <div class="col-md-12">
+    <div class="card">
 
-                <div class="col-md-4">
-                  <label class="form-label">Letter Type</label>
-                  <select class="form-select" [(ngModel)]="selectedLetter" (ngModelChange)="onLetterChange($event)">
-                    <option value="" disabled selected>
-                      Select Letter
-                    </option>
-                    <option *ngFor="let letter of _actionListDataList" [value]="letter.actionCode">
-                      {{ letter.actionDescription }}
-                    </option>
-                  </select>
-                </div>
+      <!-- Updated Header with Close Icon -->
+      <div class="card-header d-flex justify-content-between align-items-center fw-bold">
+        <span>Generate Letter</span>
+        <button type="button"
+                class="btn-close"
+                aria-label="Close"
+                (click)="cancelLetter()">
+        </button>
+      </div>
 
-                <div class="col-md-3">
-                  <button class="btn btn-primary mt-4" [disabled]="!selectedLetter"
+      <div class="card-body">
+        <div class="row g-3 align-items-end">
+
+          <div class="col-md-4">
+            <label class="form-label">Letter Type</label>
+            <select class="form-select"
+                    [(ngModel)]="selectedLetter"
+                    (ngModelChange)="onLetterChange($event)">
+              <option value="" disabled selected>
+                Select Letter
+              </option>
+              <option *ngFor="let letter of _actionListDataList"
+                      [value]="letter.actionCode">
+                {{ letter.actionDescription }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <button class="btn btn-primary mt-4"
+                    [disabled]="!selectedLetter"
                     (click)="viewGenerateLetter(selectedLetter)">
-                    Generate
-                  </button>
-                </div>
-
-              </div>
-            </div>
+              Generate
+            </button>
           </div>
+
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
+
 
       <!-- Person Selection Modal -->
       <div class="modal fade" id="personSelectionModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
